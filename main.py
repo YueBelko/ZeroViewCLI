@@ -11,16 +11,15 @@ corpPass = '00020A69177B'
 
 # todo: функция формирования ini-файлов
 def makefolder(orgname):
-    path = '/ini/'
-    os.mkdir(path + str(orgname)
-    pathini = "/ini/" + orgname
+    path = 'ini//'
+    os.mkdir(path + str(orgname))
+    pathini = "ini//" + orgname + "//"
     print(pathini)
     return pathini
 
 def iniFile(orgname, corpId, corpPass):
-
-    makefolder(orgname)
-    filename = filepath + "/zeroviewer.ini"
+    pathini = makefolder(orgname)
+    filename = pathini + "zeroviewer.ini"
     inifile = open(filename, 'w', encoding="utf-8")
     outinifile = '''[Mode]
     server=0
